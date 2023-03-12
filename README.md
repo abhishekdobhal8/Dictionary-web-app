@@ -1,1 +1,1 @@
-Dictinary web app
+# Dictionary web app

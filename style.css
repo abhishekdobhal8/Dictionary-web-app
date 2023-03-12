@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Space+Mono&family=Tinos&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: min(700px, 90%);
+  margin: auto;
+  font-family: "tinos", serif;
+  /* font-family: "poppins", sans-serif; */
+  /* font-family: monospace; */
+}
+
+.head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+}
+
+.head-container i:hover {
+  color: rgb(69, 68, 68);
+  cursor: pointer;
+}
+
+.header-items {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+}
+
+.font-selector {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.font-selector > P {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-inline: 1rem;
+}
+
+.font-dropdown {
+  position: absolute;
+  display: none;
+  top: 2.5rem;
+  background-color: #171717;
+  border-radius: 0.5rem;
+}
+
+.font-dropdown .active {
+  display: block;
+}
+
+.font-dropdown p {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  color: #fff;
+}
+
+.font-dropdown > p:hover {
+  cursor: pointer;
+  background-color: #f8f8f8;
+  color: #000000;
+}
+
+.searchbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-block: 1rem;
+  background-color: #e9e9e9;
+  border-radius: 0.5rem;
+}
+
+.searchbar input {
+  all: unset;
+  width: 100%;
+  padding: 0.5rem;
+  color: #000000;
+}
+
+.searchbar input::placeholder {
+  color: #000000;
+}
+
+.search-btn {
+  all: unset;
+  padding: 0.75rem;
+}
+
+.display-word {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 2rem;
+}
+
+.word {
+  font-size: 2rem;
+}
+
+.play-btn {
+  all: unset;
+  color: #feaeff;
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+}
+
+.play-btn:hover {
+  cursor: pointer;
+  color: #fcbdfc;
+}
+
+.play-btn-color {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: #fb61e9;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: -1;
+}
+
+.line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin-block: 1rem;
+  background-color: #c3c3c3;
+}
+
+.parts-of-speech h2 {
+  margin-block: 1rem;
+}
+
+.example {
+  color: #797878;
+  margin-block: 0.5rem;
+}
+
+.synonyms {
+  display: flex;
+  gap: 1rem;
+  color: #797878;
+  margin-block: 1rem;
+}
+
+.synonym-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  color: #de21c8;
+}
+
+.antonyms {
+  display: flex;
+  gap: 1rem;
+  color: #797878;
+  margin-block: 1rem;
+}
+
+.antonym-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  color: #de21c8;
+}
+
+.source {
+  margin-block: 1rem 2rem;
+}
+
+.source h3 {
+  margin-block: 0.5rem;
+}
+
+@media (max-width: 32rem) {
+  .word {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .word {
+    font-size: 1.2rem;
+  }
+}

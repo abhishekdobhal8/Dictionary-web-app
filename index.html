@@ -18,136 +18,151 @@
           <i class="fa-2x fa-solid fa-spell-check"></i>
         <div class="header-items">
             <div class="font-selector">
-                <p>Serif</p>
+                <p class="current-font">Serif</p>
                 <i class="fa-2x fa-solid fa-chevron-down"></i>
               </div>
               <div class="font-dropdown">
-                  <p>Serif</p>
-                  <p>Sans serif</p>
-                  <p>Monospace</p>
+                  <p class="fonts font1">Serif</p>
+                  <p class="fonts font2">Sans serif</p>
+                  <p class="fonts font3">Monospace</p>
               </div>
-              <div class="theme-toggler">
-                <i class="fa-2x fa-solid fa-circle-half-stroke"></i>
-              </div>
+                <i class="fa-2x fa-solid fa-circle-half-stroke theme-toggler"></i>
         </div>
       </div>
     </header>
     <main>
       <div class="main-container">
         <div class="searchbar">
-          <input type="text" placeholder="Search..." />
+          <input id = "input" type="text" placeholder="Search..." />
           <button class="search-btn" type="button">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
-        <div class="display-word">
-          <div class="word">
-            <h1>keyboard</h1>
-            <p>/lorem/</p>
-          </div>
-          <button type="button" class="play-btn">
-            <i class="fa-4x fa-solid fa-circle-play"></i>
-            <div class="play-btn-color"></div>
-          </buttton>
-        </div>
-        <div class="meaning">
-          <div class="parts-of-speech">
-            <span class="line"></span>
-            <h2>noun</h2>
-          </div>
-          <div class="definitions">
-            <ul class="definition-item">
-              <li>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto, explicabo.
-              </li>
-              <div class="example">
-                "Lorem, ipsum dolor sit amet consectetur adipisicing."
+        <section class="data-section">
+          <h1 class="message"> Search for something...</h1>
+        </section>
+        <template>
+            <div class="display-word">
+              <div class="word">
+                
               </div>
-            </ul>
-            <div class="synonyms">
-              <h3>Synonyms</h3>
-              <div class="synonym-items">
-                  <p>lorem</p>
-                  <p>lorem</p>
-                  <p>lorem</p>
-              </div>
+              <button type="button" class="play-btn">
+                
+              </buttton>
             </div>
-            <div class="antonyms">
-              <h3>Antonyms</h3>
-              <div class="antonym-items">
-                <p>lorem</p>
-                <p>lorem</p>
-                <p>lorem</p>
+        </template>
+
+        <!-- <template>
+          <div class="display-word">
+            <div class="word">
+              <h1>keyboard</h1>
+              <p>/lorem/</p>
             </div>
+            <button type="button" class="play-btn">
+              <i class="fa-4x fa-solid fa-circle-play"></i>
+              <div class="play-btn-color"></div>
+            </buttton>
           </div>
-          <div class="parts-of-speech">
+          <div class="meaning">
+            <div class="parts-of-speech">
               <span class="line"></span>
-            <h2>noun</h2>
-          </div>
-          <div class="definitions">
-            <ul class="definition-item">
-              <li>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto, explicabo.
-              </li>
-              <div class="example">
-                Lorem, ipsum dolor sit amet consectetur adipisicing.
-              </div>
-            </ul>
-            <div class="synonyms">
-              <h3>Synonyms</h3>
-              <div class="synonym-items">
-                <p>lorem</p>
-                <p>lorem</p>
-                <p>lorem</p>
+              <h2>noun</h2>
             </div>
-            </div>
-            <div class="antonyms">
-              <h3>Antonyms</h3>
-              <div class="antonym-items">
-                <p>lorem</p>
-                <p>lorem</p>
-                <p>lorem</p>
-            </div>
-          </div>
-          <div class="parts-of-speech">
-              <span class="line"></span>
-            <h2>noun</h2>
-          </div>
-          <div class="definitions">
-            <ul class="definition-item">
-              <li>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto, explicabo.
-              </li>
-              <div class="example">
-                Lorem, ipsum dolor sit amet consectetur adipisicing.
-              </div>
-            </ul>
-            <div class="synonyms">
+            <div class="definitions">
+              <ul class="definition-item">
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, explicabo.
+                </li>
+                <div class="example">
+                  "Lorem, ipsum dolor sit amet consectetur adipisicing."
+                </div>
+              </ul>
+              <div class="synonyms">
                 <h3>Synonyms</h3>
                 <div class="synonym-items">
                     <p>lorem</p>
                     <p>lorem</p>
                     <p>lorem</p>
                 </div>
-            </div>
-            <div class="antonyms">
-              <h3>Antonyms</h3>
-              <div class="antonym-items">
+              </div>
+              <div class="antonyms">
+                <h3>Antonyms</h3>
+                <div class="antonym-items">
                   <p>lorem</p>
                   <p>lorem</p>
                   <p>lorem</p>
               </div>
             </div>
+            <div class="parts-of-speech">
+                <span class="line"></span>
+              <h2>noun</h2>
+            </div>
+            <div class="definitions">
+              <ul class="definition-item">
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, explicabo.
+                </li>
+                <div class="example">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing.
+                </div>
+              </ul>
+              <div class="synonyms">
+                <h3>Synonyms</h3>
+                <div class="synonym-items">
+                  <p>lorem</p>
+                  <p>lorem</p>
+                  <p>lorem</p>
+              </div>
+              </div>
+              <div class="antonyms">
+                <h3>Antonyms</h3>
+                <div class="antonym-items">
+                  <p>lorem</p>
+                  <p>lorem</p>
+                  <p>lorem</p>
+              </div>
+            </div>
+            <div class="parts-of-speech">
+                <span class="line"></span>
+              <h2>noun</h2>
+            </div>
+            <div class="definitions">
+              <ul class="definition-item">
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, explicabo.
+                </li>
+                <div class="example">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing.
+                </div>
+              </ul>
+              <div class="synonyms">
+                  <h3>Synonyms</h3>
+                  <div class="synonym-items">
+                      <p>lorem</p>
+                      <p>lorem</p>
+                      <p>lorem</p>
+                  </div>
+              </div>
+              <div class="antonyms">
+                <h3>Antonyms</h3>
+                <div class="antonym-items">
+                    <p>lorem</p>
+                    <p>lorem</p>
+                    <p>lorem</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <span class="line"></span>
-        <div class="source">
-          <h3>Source</h3>
-          <a href="https://www.wiktionary.org">https://www.wiktionary.org</a>
-        </div>
+          <span class="line"></span>
+          <div class="source">
+            <h3>Source</h3>
+            <a href="https://www.wiktionary.org">https://www.wiktionary.org</a>
+          </div>
+        </template> -->
+        
       </div>
     </main>
   </body>

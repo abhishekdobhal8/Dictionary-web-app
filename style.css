@@ -152,6 +152,10 @@ body.theme-change {
   margin-block: 1rem;
 }
 
+.definition-item li {
+  margin-block: 0.5rem;
+}
+
 .example {
   color: #9f9d9d;
   margin-block: 0.5rem;

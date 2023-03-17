@@ -12,11 +12,6 @@ const input = document.getElementById("input");
 const searchBtn = document.querySelector(".search-btn");
 const dataSection = document.querySelector(".data-section");
 
-let partOfSpeech = [];
-let definitions = [];
-let synonyms = [];
-let antonyms = [];
-
 fontSelector.addEventListener("click", (e) => {
   fontDropdown.classList.toggle("active");
 });
@@ -64,11 +59,12 @@ async function fetchData(searchItem) {
     dataSection.innerHTML = "";
     content = template.content.cloneNode(true);
     dataSection.append(content);
+
     const wordContainer = document.querySelector(".word");
     const playBtn = document.querySelector(".play-btn");
+    const meaningElm = document.querySelector(".meaning");
 
     const data = await res.json();
-    console.log(data);
 
     const word = data[0].word;
     createElement("h1", wordContainer, word);
@@ -94,11 +90,105 @@ async function fetchData(searchItem) {
     createElement("div", playBtn, null, "play-btn-color");
 
     const meanings = data[0].meanings;
-    meanings.forEach((element) => {
-      partOfSpeech.push(element.partOfSpeech);
-      definitions.push(element.definitions);
-      synonyms.push(element.synonyms);
-      antonyms.push(element.antonyms);
+    meanings.forEach((item) => {
+      const partOfSpeechElm = createElement(
+        "div",
+        meaningElm,
+        null,
+        "parts-of-speech"
+      );
+      createElement("span", partOfSpeechElm, null, "line");
+      const definitionElm = createElement(
+        "div",
+        meaningElm,
+        null,
+        "definitions"
+      );
+      const definitionItem = createElement(
+        "ul",
+        definitionElm,
+        null,
+        "definition-item"
+      );
+      createElement("h2", partOfSpeechElm, item.partOfSpeech);
+      item.definitions.forEach((def) => {
+        createElement("li", definitionItem, def.definition);
+        if (!(def.example == undefined)) {
+          createElement("div", definitionItem, def.example, "example");
+        }
+        if (!(def.synonyms.length === 0)) {
+          const synonymsElm = createElement(
+            "div",
+            definitionItem,
+            null,
+            "synonyms"
+          );
+          createElement("h3", synonymsElm, "Synonyms");
+          const synonymItems = createElement(
+            "div",
+            synonymsElm,
+            null,
+            "synonym-items"
+          );
+          def.synonyms.forEach((synitem) => {
+            createElement("p", synonymItems, synitem);
+          });
+        }
+        if (!(def.antonyms.length === 0)) {
+          const antonymsElm = createElement(
+            "div",
+            definitionItem,
+            null,
+            "antonyms"
+          );
+          createElement("h3", antonymsElm, "Antonyms");
+          const antonymItems = createElement(
+            "div",
+            antonymsElm,
+            null,
+            "antonym-items"
+          );
+          def.antonyms.forEach((antitem) => {
+            createElement("p", antonymItems, antitem);
+          });
+        }
+      });
+      if (!(item.synonyms.length === 0)) {
+        const synonymsElm = createElement(
+          "div",
+          definitionElm,
+          null,
+          "synonyms"
+        );
+        createElement("h3", synonymsElm, "Synonyms");
+        const synonymItems = createElement(
+          "div",
+          synonymsElm,
+          null,
+          "synonym-items"
+        );
+        item.synonyms.forEach((synitem) => {
+          createElement("p", synonymItems, synitem);
+        });
+      }
+      if (!(item.antonyms.length === 0)) {
+        const antonymsElm = createElement(
+          "div",
+          definitionElm,
+          null,
+          "antonyms"
+        );
+        createElement("h3", antonymsElm, "Antonyms");
+        const antonymItems = createElement(
+          "div",
+          antonymsElm,
+          null,
+          "antonym-items"
+        );
+        item.antonyms.forEach((antitem) => {
+          createElement("p", antonymItems, antitem);
+        });
+      }
     });
   } else {
     invalidSearch();
